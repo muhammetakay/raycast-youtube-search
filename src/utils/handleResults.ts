@@ -40,7 +40,9 @@ export function getStaticResult(searchText: string): SearchResult[] {
 
 export async function getAutoSearchResults(searchText: string, signal: any): Promise<SearchResult[]> {
   const response = await fetch(
-    `https://suggestqueries.google.com/complete/search?hl=en-us&ds=yt&output=chrome&q=${encodeURIComponent(searchText)}`,
+    `https://suggestqueries.google.com/complete/search?hl=en-us&ds=yt&output=chrome&q=${encodeURIComponent(
+      searchText
+    )}`,
     {
       method: "get",
       signal: signal,
